@@ -1,7 +1,5 @@
 # ql_ios
 青龙 IOS客户端
-
-
 # iOS Unsigned IPA Build & Usage Guide (无证书 IPA 构建与使用指南)
 
 [English](#english) | [中文](#chinese)
@@ -88,46 +86,7 @@ After these steps, you will get a `qlmb.ipa` file in the current directory.
 - **支持 TrollStore**: 如果您的设备支持 TrollStore (通常是 iOS 14.0 - 17.0)，可以永久安装应用并获得完整权限。
 - **自签名支持**: 您可以使用免费的 Apple ID 进行签名安装 (有效期 7 天，之后需重签)。
 
-### 🛠 如何构建无证书 IPA
-
-我们提供了一种使用 `xcodebuild` 构建无证书 IPA 的简单方法。
-
-#### 环境要求
-- 安装了 Xcode 的 macOS 系统。
-
-#### 构建步骤
-
-在项目根目录下运行以下终端命令：
-
-```bash
-# 1. 编译 Release 版本 (禁用代码签名)
-# 此命令将在没有签名要求的情况下为通用 iOS 设备编译应用
-xcodebuild -project qlmb.xcodeproj \
-           -scheme qlmb \
-           -configuration Release \
-           -destination 'generic/platform=iOS' \
-           clean build \
-           CODE_SIGN_IDENTITY="" \
-           CODE_SIGNING_REQUIRED=NO \
-           -derivedDataPath ./build_output
-
-# 2. 创建 Payload 目录结构
-mkdir -p Payload
-
-# 3. 将编译好的 .app 复制到 Payload
-# 注意：路径取决于构建输出
-cp -R ./build_output/Build/Products/Release-iphoneos/qlmb.app Payload/
-
-# 4. 压缩生成 .ipa
-zip -r qlmb.ipa Payload
-
-# 5. (可选) 清理临时文件
-rm -rf Payload build_output
-```
-
-执行完毕后，您将在当前目录下得到一个 `qlmb.ipa` 文件。
-
-### 📱 安装指南
+###  安装指南
 
 #### 方案 1: TrollStore (推荐)
 **要求**: 支持的 iOS 版本 (通常是 iOS 14.0 - 17.0)。
@@ -145,6 +104,10 @@ rm -rf Payload build_output
 4. 输入您的 Apple ID 邮箱。
 5. 点击 **Start** 开始安装。
 6. **注意**: 免费账号每 7 天需要重新签名。
+
+---
+*Built with ❤️ for the open-source community.*
+
 
 ---
 *Built with ❤️ for the open-source community.*
