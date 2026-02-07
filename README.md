@@ -1,6 +1,6 @@
 # ql_ios
 青龙 IOS客户端
-# iOS Unsigned IPA Build & Usage Guide (无证书 IPA 构建与使用指南)
+# iOS Unsigned IPA Usage Guide (无证书 IPA 使用指南)
 
 [English](#english) | [中文](#chinese)
 
