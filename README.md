@@ -98,10 +98,3 @@ After these steps, you will get a `qlmb.ipa` file in the current directory.
 4. 输入您的 Apple ID 邮箱。
 5. 点击 **Start** 开始安装。
 6. **注意**: 免费账号每 7 天需要重新签名。
-
----
-*Built with ❤️ for the open-source community.*
-
-
----
-*Built with ❤️ for the open-source community.*
