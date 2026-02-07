@@ -6,9 +6,6 @@
 
 <a name="english"></a>
 ## 🇬🇧 English
-
-This project supports generating **unsigned IPA files** (Unsigned IPA), which is suitable for installation via **TrollStore** or self-signing tools (like **Sideloadly**, **AltStore**).
-
 ### 🚀 Why use Unsigned IPA?
 
 - **No Developer Account Required**: You don't need to pay $99/year for an Apple Developer Program account.
@@ -77,9 +74,6 @@ After these steps, you will get a `qlmb.ipa` file in the current directory.
 
 <a name="chinese"></a>
 ## 🇨🇳 中文
-
-本项目支持生成 **无证书 IPA 文件** (Unsigned IPA)，适用于通过 **TrollStore (巨魔)** 安装或使用 **自签名工具** (如 Sideloadly, AltStore) 进行安装。
-
 ### 🚀 为什么要使用无证书 IPA?
 
 - **无需开发者账号**: 不需要支付 $99/年的 Apple Developer Program 费用。
