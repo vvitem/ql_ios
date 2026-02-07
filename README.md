@@ -41,45 +41,6 @@
 - **TrollStore Support**: If your device supports TrollStore (iOS 14.0 - 17.0, depending on version), you can install it permanently with full system permissions.
 - **Self-Signing**: You can use your own free Apple ID to sign and install the app (expires every 7 days).
 
-### 🛠 How to Build Unsigned IPA
-
-We provide a simple way to build an IPA without a certificate using `xcodebuild`.
-
-#### Prerequisites
-- macOS with Xcode installed.
-
-#### Build Steps
-
-Run the following commands in Terminal at the project root:
-
-```bash
-# 1. Build Release version (Disable Code Signing)
-# This command compiles the app for generic iOS devices without signing requirements
-xcodebuild -project qlmb.xcodeproj \
-           -scheme qlmb \
-           -configuration Release \
-           -destination 'generic/platform=iOS' \
-           clean build \
-           CODE_SIGN_IDENTITY="" \
-           CODE_SIGNING_REQUIRED=NO \
-           -derivedDataPath ./build_output
-
-# 2. Create Payload directory structure
-mkdir -p Payload
-
-# 3. Copy the compiled .app to Payload
-# Note: The path depends on the build output
-cp -R ./build_output/Build/Products/Release-iphoneos/qlmb.app Payload/
-
-# 4. Zip it to create .ipa
-zip -r qlmb.ipa Payload
-
-# 5. (Optional) Clean up temporary files
-rm -rf Payload build_output
-```
-
-After these steps, you will get a `qlmb.ipa` file in the current directory.
-
 ### 📱 Installation Guide
 
 #### Option 1: TrollStore (Recommended)
