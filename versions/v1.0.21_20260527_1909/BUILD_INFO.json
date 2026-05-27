@@ -1,0 +1,12 @@
+{
+  "app": "qlmb",
+  "version": "1.0.21",
+  "build": "22",
+  "bundle_id": "com.okm.qlmb",
+  "source_branch": "feature/app-store-subscription",
+  "source_commit": "eac2f80",
+  "release_version": "v1.0.21_20260527_1909",
+  "ipa_name": "qlmb-adhoc.ipa",
+  "ipa_size_bytes": 5035548,
+  "created_at": "2026-05-27 19:09:35"
+}
